@@ -1,11 +1,10 @@
-
 import { useState } from 'react';
 import { Section, HeroSection } from "@/components/ui/containers";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/components/ui/use-toast";
-import { Package, CheckCircle, Clock, Truck, Check, AlertCircle } from 'lucide-react';
+import { Package, CheckCircle, Clock, Truck, Check, AlertCircle, MapPin } from 'lucide-react';
 
 interface TrackingStep {
   id: number;

@@ -15,6 +15,7 @@ import Account from "./pages/Account";
 import Shipping from "./pages/Shipping";
 import NotFound from "./pages/NotFound";
 
+// ScrollToTop component moved inside BrowserRouter context
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
