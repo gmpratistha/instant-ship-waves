@@ -386,7 +386,7 @@ const Home = () => {
                 </Button>
               </Link>
               <Link to="/shipping">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="lg" className="bg-white text-brand-orange hover:bg-gray-100">
                   Ship Now
                 </Button>
               </Link>
