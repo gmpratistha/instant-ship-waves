@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Package } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,8 +25,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center" onClick={closeMenu}>
-            <Package className="h-8 w-8 text-brand-orange" />
-            <span className="ml-2 text-xl font-bold text-gray-800">Order<span className="text-brand-orange">Instant</span></span>
+            <img 
+              src="/lovable-uploads/9d152b33-cf8e-4dac-87f2-b8d02ce79bd3.png" 
+              alt="Order Instant Logo" 
+              className="h-10" 
+            />
           </Link>
           
           {/* Desktop Navigation */}
