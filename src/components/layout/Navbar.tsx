@@ -23,12 +23,12 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="container-custom py-4">
         <div className="flex justify-between items-center">
-          {/* Logo */}
+          {/* Logo with increased size */}
           <Link to="/" className="flex items-center" onClick={closeMenu}>
             <img 
               src="/lovable-uploads/9d152b33-cf8e-4dac-87f2-b8d02ce79bd3.png" 
               alt="Order Instant Logo" 
-              className="h-10" 
+              className="h-14 md:h-16" // Increased from h-10
             />
           </Link>
           

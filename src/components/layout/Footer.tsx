@@ -9,11 +9,15 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
+          {/* Company Info with updated logo */}
           <div>
             <div className="flex items-center mb-4">
-              <Package className="h-8 w-8 text-brand-orange" />
-              <span className="ml-2 text-xl font-bold">Order<span className="text-brand-orange">Instant</span></span>
+              <img 
+                src="/lovable-uploads/9d152b33-cf8e-4dac-87f2-b8d02ce79bd3.png" 
+                alt="Order Instant Logo" 
+                className="h-12 mr-2" 
+              />
+              <span className="text-xl font-bold">Order<span className="text-brand-orange">Instant</span></span>
             </div>
             <p className="text-gray-400 mb-4">
               Fast, reliable delivery services for all your shipping needs. Local and international solutions for businesses and individuals.
