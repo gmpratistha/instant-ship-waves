@@ -7,10 +7,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/components/ui/use-toast";
 import { Eye, EyeOff, Mail, Lock, User, Check } from 'lucide-react';
+import { Checkbox } from "@/components/ui/checkbox";
+import TermsAndConditions from "@/components/TermsAndConditions";
 
 const Account = () => {
   const { toast } = useToast();
   const [activeTab, setActiveTab] = useState('login');
+  const [termsOpen, setTermsOpen] = useState(false);
   
   // Login form state
   const [loginData, setLoginData] = useState({
@@ -31,6 +34,7 @@ const Account = () => {
   const [showSignupPassword, setShowSignupPassword] = useState(false);
   const [showSignupConfirmPassword, setShowSignupConfirmPassword] = useState(false);
   const [isSubmittingSignup, setIsSubmittingSignup] = useState(false);
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
   
   const handleLoginChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -73,6 +77,15 @@ const Account = () => {
       return;
     }
     
+    if (!acceptedTerms) {
+      toast({
+        title: "Terms and Conditions Required",
+        description: "Please agree to the Terms and Conditions to continue.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmittingSignup(true);
     
     // Simulate signup submission
@@ -91,6 +104,11 @@ const Account = () => {
     }, 1500);
   };
 
+  const openTermsModal = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setTermsOpen(true);
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -106,6 +124,9 @@ const Account = () => {
           </p>
         </div>
       </HeroSection>
+
+      {/* Terms and Conditions Modal */}
+      <TermsAndConditions open={termsOpen} onOpenChange={setTermsOpen} />
 
       {/* Account Forms Section */}
       <Section className="bg-white">
@@ -315,16 +336,15 @@ const Account = () => {
                         </div>
                       </div>
                       
-                      <div className="flex items-center">
-                        <input 
+                      <div className="flex items-start">
+                        <Checkbox 
                           id="terms" 
-                          name="terms" 
-                          type="checkbox" 
-                          className="h-4 w-4 text-brand-orange focus:ring-brand-orange border-gray-300 rounded" 
-                          required
+                          checked={acceptedTerms}
+                          onCheckedChange={(checked) => setAcceptedTerms(checked === true)}
+                          className="mt-1"
                         />
                         <label htmlFor="terms" className="ml-2 block text-sm text-gray-700">
-                          I agree to the <a href="#" className="text-brand-orange hover:text-brand-dark-orange">Terms of Service</a> and <a href="#" className="text-brand-orange hover:text-brand-dark-orange">Privacy Policy</a>
+                          I agree to the <a href="#" onClick={openTermsModal} className="text-brand-orange hover:text-brand-dark-orange underline">Terms and Conditions</a> including the liability limitations, COD policies, packaging requirements, and dispute resolution procedures.
                         </label>
                       </div>
                       
