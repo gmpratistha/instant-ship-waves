@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Package, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,9 +13,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/9d152b33-cf8e-4dac-87f2-b8d02ce79bd3.png" 
+                src="/lovable-uploads/f4eea901-0f64-404b-9722-22b10cde2f00.png" 
                 alt="Order Instant Logo" 
-                className="h-12 mr-2" 
+                className="h-14 mr-2" // Increased size for better visibility
               />
               <span className="text-xl font-bold">Order<span className="text-brand-orange">Instant</span></span>
             </div>
