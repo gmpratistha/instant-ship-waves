@@ -14,6 +14,7 @@ import Track from "./pages/Track";
 import Account from "./pages/Account";
 import Shipping from "./pages/Shipping";
 import NotFound from "./pages/NotFound";
+import LogoProcessor from "./components/LogoProcessor";
 
 // ScrollToTop component moved inside BrowserRouter context
 const ScrollToTop = () => {
@@ -33,6 +34,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <LogoProcessor />
       <BrowserRouter>
         <ScrollToTop />
         <div className="flex flex-col min-h-screen">
