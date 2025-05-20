@@ -26,9 +26,9 @@ const Navbar = () => {
           {/* Updated Logo with appropriate size */}
           <Link to="/" className="flex items-center" onClick={closeMenu}>
             <img 
-              src="/lovable-uploads/f4eea901-0f64-404b-9722-22b10cde2f00.png" 
+              src="/lovable-uploads/ad2b89c1-b3e4-4bbf-b260-3013015e7f59.png" 
               alt="Order Instant Logo" 
-              className="h-16 md:h-20" // Increased size for better visibility
+              className="h-20 md:h-24" // Increased size for better visibility
             />
           </Link>
           

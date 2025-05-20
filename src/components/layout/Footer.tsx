@@ -13,9 +13,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/f4eea901-0f64-404b-9722-22b10cde2f00.png" 
+                src="/lovable-uploads/ad2b89c1-b3e4-4bbf-b260-3013015e7f59.png" 
                 alt="Order Instant Logo" 
-                className="h-14 mr-2" // Increased size for better visibility
+                className="h-16 mr-2" // Increased size for better visibility
               />
               <span className="text-xl font-bold">Order<span className="text-brand-orange">Instant</span></span>
             </div>

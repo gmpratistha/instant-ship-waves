@@ -4,8 +4,8 @@ import { loadImage, removeBackground } from '../utils/imageUtils';
 
 export const processLogo = async () => {
   try {
-    // Fetch the existing logo
-    const response = await fetch('/lovable-uploads/f4eea901-0f64-404b-9722-22b10cde2f00.png');
+    // Fetch the new logo
+    const response = await fetch('/lovable-uploads/ad2b89c1-b3e4-4bbf-b260-3013015e7f59.png');
     if (!response.ok) {
       throw new Error('Failed to fetch logo');
     }
@@ -17,7 +17,7 @@ export const processLogo = async () => {
     // Create a URL for the processed image
     const processedUrl = URL.createObjectURL(processedBlob);
     
-    // Apply this to all instances of the logo
+    // Apply this to all instances of the old logo
     const logoElements = document.querySelectorAll('img[src="/lovable-uploads/f4eea901-0f64-404b-9722-22b10cde2f00.png"]');
     logoElements.forEach((img) => {
       (img as HTMLImageElement).src = processedUrl;
