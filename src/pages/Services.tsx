@@ -382,7 +382,7 @@ const Services = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="lg" className="bg-white text-brand-orange hover:bg-gray-100">
                   Contact Sales
                 </Button>
               </Link>

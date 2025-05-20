@@ -97,21 +97,21 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Contact */}
+          {/* Contact - Updated with new contact information */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-brand-orange mr-2 mt-1" />
-                <span className="text-gray-400">123 Delivery Street, Shipping City, SC 12345, United States</span>
+                <span className="text-gray-400">Samakhusi-3, Kathmandu, Nepal</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-brand-orange mr-2" />
-                <a href="tel:+1-800-123-4567" className="text-gray-400 hover:text-brand-orange transition-colors duration-200">+1-800-123-4567</a>
+                <a href="tel:01-4974691" className="text-gray-400 hover:text-brand-orange transition-colors duration-200">01-4974691</a>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-brand-orange mr-2" />
-                <a href="mailto:info@orderinstant.com" className="text-gray-400 hover:text-brand-orange transition-colors duration-200">info@orderinstant.com</a>
+                <a href="mailto:orderinstant088@gmail.com" className="text-gray-400 hover:text-brand-orange transition-colors duration-200">orderinstant088@gmail.com</a>
               </li>
             </ul>
           </div>
