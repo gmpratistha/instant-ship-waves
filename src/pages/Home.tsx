@@ -14,57 +14,25 @@ const Home = () => {
       <HeroSection className="py-20 bg-gradient-to-br from-blue-50 to-white text-gray-900 min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-800">
-              Fast & Reliable <span className="text-brand-orange">Delivery</span> Service
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-teal-700">
+              Dare to be <span className="text-brand-orange">different...</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8">
               We deliver your packages with speed, care, and trust across Nepal
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/shipping">
-                <Button className="bg-brand-orange hover:bg-brand-dark-orange text-white px-8 py-4 text-lg rounded-full">
-                  SHIP NOW <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link to="/services">
-                <Button variant="outline" className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-8 py-4 text-lg rounded-full">
-                  LEARN MORE
-                </Button>
-              </Link>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full">
+                LEARN MORE <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
             </div>
           </div>
           
           <div className="relative">
-            <div className="bg-gradient-to-br from-brand-orange to-brand-dark-orange rounded-3xl p-8 text-white relative overflow-hidden">
-              <div className="relative z-10">
-                <Truck className="h-20 w-20 mb-6" />
-                <h3 className="text-2xl font-bold mb-4">Same Day Delivery</h3>
-                <p className="text-lg opacity-90">Get your packages delivered within hours in Kathmandu valley</p>
-              </div>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -translate-y-16 translate-x-16"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white opacity-10 rounded-full translate-y-12 -translate-x-12"></div>
-            </div>
-            
-            {/* Floating stats */}
-            <div className="absolute -top-4 -left-4 bg-white rounded-2xl p-4 shadow-lg">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-6 w-6 text-green-500" />
-                <div>
-                  <div className="font-bold text-gray-800">99.8%</div>
-                  <div className="text-sm text-gray-600">Success Rate</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-4 shadow-lg">
-              <div className="flex items-center gap-2">
-                <Star className="h-6 w-6 text-yellow-500" />
-                <div>
-                  <div className="font-bold text-gray-800">10M+</div>
-                  <div className="text-sm text-gray-600">Delivered</div>
-                </div>
-              </div>
-            </div>
+            <img 
+              src="/lovable-uploads/84479c07-8310-482f-9083-c7494b89be6e.png" 
+              alt="Delivery truck with packages" 
+              className="w-full h-auto object-contain"
+            />
           </div>
         </div>
       </HeroSection>
