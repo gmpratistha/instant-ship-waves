@@ -11,17 +11,13 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <HeroSection 
-        className="py-20 text-white min-h-screen flex items-center relative"
-        backgroundImage="/lovable-uploads/ee2b4f6a-697c-44ad-9ba0-34fe553423ba.png"
-        overlay={true}
-      >
+      <HeroSection className="py-20 bg-gradient-to-br from-blue-50 to-white min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900 drop-shadow-lg">
               Dare to be <span className="text-brand-orange">different...</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow-md">
+            <p className="text-xl md:text-2xl text-gray-600 mb-8">
               We deliver your packages with speed, care, and trust across Nepal
             </p>
             <div className="flex flex-wrap gap-4">
@@ -31,12 +27,19 @@ const Home = () => {
             </div>
           </div>
           
-          <div className="relative flex justify-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-xl">
-              <div className="text-center">
-                <Truck className="h-20 w-20 mx-auto mb-4 text-white" />
-                <h3 className="text-2xl font-bold mb-4 text-white">Express Delivery</h3>
-                <p className="text-white/90">Fast and reliable delivery service across Nepal</p>
+          <div className="relative h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-xl">
+            <div 
+              className="absolute inset-0 bg-cover bg-center" 
+              style={{ backgroundImage: `url(/lovable-uploads/ee2b4f6a-697c-44ad-9ba0-34fe553423ba.png)` }}
+            />
+            <div className="absolute inset-0 bg-black/30" />
+            <div className="relative h-full flex items-center justify-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-xl">
+                <div className="text-center">
+                  <Truck className="h-20 w-20 mx-auto mb-4 text-white" />
+                  <h3 className="text-2xl font-bold mb-4 text-white">Express Delivery</h3>
+                  <p className="text-white/90">Fast and reliable delivery service across Nepal</p>
+                </div>
               </div>
             </div>
           </div>
