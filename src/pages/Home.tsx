@@ -11,28 +11,34 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <HeroSection className="py-20 bg-gradient-to-br from-blue-50 to-white text-gray-900 min-h-screen flex items-center">
+      <HeroSection 
+        className="py-20 text-white min-h-screen flex items-center relative"
+        backgroundImage="/lovable-uploads/ee2b4f6a-697c-44ad-9ba0-34fe553423ba.png"
+        overlay={true}
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-teal-700">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-lg">
               Dare to be <span className="text-brand-orange">different...</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow-md">
               We deliver your packages with speed, care, and trust across Nepal
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full shadow-lg">
                 LEARN MORE <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </div>
           
-          <div className="relative">
-            <img 
-              src="/lovable-uploads/84479c07-8310-482f-9083-c7494b89be6e.png" 
-              alt="Delivery truck with packages" 
-              className="w-full h-auto object-contain"
-            />
+          <div className="relative flex justify-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-xl">
+              <div className="text-center">
+                <Truck className="h-20 w-20 mx-auto mb-4 text-white" />
+                <h3 className="text-2xl font-bold mb-4 text-white">Express Delivery</h3>
+                <p className="text-white/90">Fast and reliable delivery service across Nepal</p>
+              </div>
+            </div>
           </div>
         </div>
       </HeroSection>
