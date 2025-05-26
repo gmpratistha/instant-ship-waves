@@ -3,176 +3,173 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Section, HeroSection } from "@/components/ui/containers";
 import { 
-  Clock, Package, Truck, Globe, 
-  CheckCircle2, Shield, Clock3, PieChart,
-  MapPin, Phone, Mail, ArrowRight
+  MapPin, Phone, Mail, ArrowRight, CheckCircle2, 
+  Truck, Clock, Shield, Star
 } from 'lucide-react';
-import { Card, CardContent } from "@/components/ui/card";
 
 const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <HeroSection className="py-20 bg-gradient-to-br from-gray-100 to-gray-200 text-gray-900 min-h-screen flex items-center">
+      <HeroSection className="py-20 bg-gradient-to-br from-blue-50 to-white text-gray-900 min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           <div className="max-w-2xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-800">
-              Dare to be <span className="text-brand-orange">different...</span>
+              Fast & Reliable <span className="text-brand-orange">Delivery</span> Service
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8">
-              Revolutionary delivery solutions that set us apart from the competition
+              We deliver your packages with speed, care, and trust across Nepal
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full">
-                LEARN MORE <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link to="/shipping">
+                <Button className="bg-brand-orange hover:bg-brand-dark-orange text-white px-8 py-4 text-lg rounded-full">
+                  SHIP NOW <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link to="/services">
+                <Button variant="outline" className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-8 py-4 text-lg rounded-full">
+                  LEARN MORE
+                </Button>
+              </Link>
             </div>
           </div>
           
           <div className="relative">
-            <div className="relative z-10">
-              <img 
-                src="/lovable-uploads/331a0921-0d5b-4cc6-ab67-b099929091ff.png" 
-                alt="Delivery Truck with Packages" 
-                className="w-full h-auto max-w-2xl mx-auto"
-              />
+            <div className="bg-gradient-to-br from-brand-orange to-brand-dark-orange rounded-3xl p-8 text-white relative overflow-hidden">
+              <div className="relative z-10">
+                <Truck className="h-20 w-20 mb-6" />
+                <h3 className="text-2xl font-bold mb-4">Same Day Delivery</h3>
+                <p className="text-lg opacity-90">Get your packages delivered within hours in Kathmandu valley</p>
+              </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white opacity-10 rounded-full translate-y-12 -translate-x-12"></div>
             </div>
-            {/* Floating location pins */}
-            <div className="absolute top-10 left-10 w-12 h-12 bg-brand-orange rounded-full flex items-center justify-center animate-bounce">
-              <MapPin className="h-6 w-6 text-white" />
+            
+            {/* Floating stats */}
+            <div className="absolute -top-4 -left-4 bg-white rounded-2xl p-4 shadow-lg">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-6 w-6 text-green-500" />
+                <div>
+                  <div className="font-bold text-gray-800">99.8%</div>
+                  <div className="text-sm text-gray-600">Success Rate</div>
+                </div>
+              </div>
             </div>
-            <div className="absolute top-20 right-20 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center animate-bounce delay-75">
-              <MapPin className="h-4 w-4 text-white" />
-            </div>
-            <div className="absolute bottom-20 right-10 w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center animate-bounce delay-150">
-              <MapPin className="h-5 w-5 text-white" />
+            
+            <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-4 shadow-lg">
+              <div className="flex items-center gap-2">
+                <Star className="h-6 w-6 text-yellow-500" />
+                <div>
+                  <div className="font-bold text-gray-800">10M+</div>
+                  <div className="text-sm text-gray-600">Delivered</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </HeroSection>
 
-      {/* Contacts Section */}
+      {/* Services Overview */}
       <Section className="bg-white py-20">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-brand-orange mb-8">CONTACTS</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Services</h2>
+          <p className="text-xl text-gray-600">Comprehensive delivery solutions for all your needs</p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="relative">
-            <img 
-              src="/lovable-uploads/da313ac2-9e21-4722-8aec-14619af2d3ab.png" 
-              alt="Delivery Service Illustration" 
-              className="w-full h-auto max-w-2xl mx-auto"
-            />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center p-6 rounded-2xl bg-gray-50 hover:bg-brand-orange hover:text-white transition-all duration-300 group">
+            <Truck className="h-16 w-16 mx-auto mb-4 text-brand-orange group-hover:text-white" />
+            <h3 className="text-2xl font-bold mb-4">Express Delivery</h3>
+            <p className="text-gray-600 group-hover:text-white">Same-day and next-day delivery options for urgent packages</p>
           </div>
           
-          <div className="space-y-8">
-            <div className="flex items-center space-x-4">
-              <div className="bg-brand-orange/10 p-4 rounded-full">
-                <MapPin className="h-8 w-8 text-brand-orange" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-2">Address</h3>
-                <p className="text-gray-600 text-lg">Samakhusi-3, Kathmandu, Nepal</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <div className="bg-brand-orange/10 p-4 rounded-full">
-                <Phone className="h-8 w-8 text-brand-orange" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-2">Phone</h3>
-                <p className="text-gray-600 text-lg">01-4974691</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <div className="bg-brand-orange/10 p-4 rounded-full">
-                <Mail className="h-8 w-8 text-brand-orange" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-2">Email</h3>
-                <p className="text-gray-600 text-lg">orderinstant088@gmail.com</p>
-              </div>
-            </div>
+          <div className="text-center p-6 rounded-2xl bg-gray-50 hover:bg-brand-orange hover:text-white transition-all duration-300 group">
+            <Shield className="h-16 w-16 mx-auto mb-4 text-brand-orange group-hover:text-white" />
+            <h3 className="text-2xl font-bold mb-4">Secure Shipping</h3>
+            <p className="text-gray-600 group-hover:text-white">End-to-end package protection with real-time tracking</p>
+          </div>
+          
+          <div className="text-center p-6 rounded-2xl bg-gray-50 hover:bg-brand-orange hover:text-white transition-all duration-300 group">
+            <Clock className="h-16 w-16 mx-auto mb-4 text-brand-orange group-hover:text-white" />
+            <h3 className="text-2xl font-bold mb-4">24/7 Support</h3>
+            <p className="text-gray-600 group-hover:text-white">Round-the-clock customer service and package tracking</p>
           </div>
         </div>
       </Section>
 
       {/* Word from CEO Section */}
-      <Section className="bg-gray-50 py-20">
+      <Section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-5xl md:text-6xl font-bold text-brand-orange mb-8">
-              WORD FROM<br />CEO
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-orange mb-8">
+              WORD FROM CEO
             </h2>
             <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+              <blockquote className="text-lg text-gray-700 leading-relaxed mb-6">
                 "At OrderInstant, our mission is simple — to deliver with speed, care, and trust. 
-                Every package we handle represents someone's priority, and we treat it as our own. 
-                Thank you for choosing us as your logistics partner."
-              </p>
-              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                Every package we handle represents someone's priority, and we treat it as our own."
+              </blockquote>
+              <blockquote className="text-lg text-gray-700 leading-relaxed mb-6">
                 "We're committed to making delivery easier, faster, and more reliable every day. 
                 Our team works tirelessly to ensure your packages reach their destination safely and on time."
-              </p>
-              <p className="text-brand-orange font-semibold text-xl">
-                "Thank you for trusting us with your logistics needs. Together, we can achieve great things."
-              </p>
+              </blockquote>
+              <div className="text-brand-orange font-semibold text-xl">
+                "Thank you for trusting us with your logistics needs."
+              </div>
+              <div className="mt-4 text-gray-600">
+                — CEO, OrderInstant
+              </div>
             </div>
           </div>
           
           <div className="flex justify-center">
             <div className="relative">
-              <img 
-                src="/lovable-uploads/b6d7c816-2585-43f6-93d0-a141e46039d7.png" 
-                alt="CEO Profile" 
-                className="w-full h-auto max-w-md mx-auto rounded-3xl"
-              />
+              <div className="w-80 h-80 bg-gradient-to-br from-brand-orange to-brand-dark-orange rounded-full flex items-center justify-center">
+                <div className="w-72 h-72 bg-white rounded-full flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-4xl">👨‍💼</span>
+                    </div>
+                    <div className="font-bold text-gray-800">CEO</div>
+                    <div className="text-brand-orange font-semibold">OrderInstant</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </Section>
 
-      {/* Explore Us Section */}
+      {/* Contact Section */}
       <Section className="bg-white py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="relative">
-            <img 
-              src="/lovable-uploads/216d0b13-9b97-4cc8-bd2a-7dba3f388044.png" 
-              alt="Mobile App with Delivery" 
-              className="w-full h-auto max-w-2xl mx-auto"
-            />
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-orange mb-8">GET IN TOUCH</h2>
+          <p className="text-xl text-gray-600">Ready to ship? Contact us today</p>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="text-center p-8 bg-gray-50 rounded-2xl">
+            <div className="bg-brand-orange/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <MapPin className="h-8 w-8 text-brand-orange" />
+            </div>
+            <h3 className="text-2xl font-semibold mb-4">Address</h3>
+            <p className="text-gray-600 text-lg">Samakhusi-3, Kathmandu, Nepal</p>
           </div>
           
-          <div>
-            <h2 className="text-5xl md:text-6xl font-bold text-brand-orange mb-8">
-              EXPLORE US
-            </h2>
-            <div className="space-y-6">
-              <p className="text-gray-600 text-xl leading-relaxed">
-                At OrderInstant, we deliver more than just packages — we deliver trust. 
-                Based in Nepal, we specialize in fast, reliable, and secure courier services 
-                tailored to meet the needs of individuals and businesses across the country.
-              </p>
-              <p className="text-gray-600 text-xl leading-relaxed">
-                Whether it's same-day delivery in the city or nationwide logistics, 
-                we're committed to making every delivery instant and hassle-free.
-              </p>
-              <p className="text-gray-600 text-xl leading-relaxed">
-                Our cutting-edge technology and dedicated team ensure that your packages 
-                are tracked, protected, and delivered with the utmost care and precision.
-              </p>
+          <div className="text-center p-8 bg-gray-50 rounded-2xl">
+            <div className="bg-brand-orange/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <Phone className="h-8 w-8 text-brand-orange" />
             </div>
-            
-            <div className="mt-10">
-              <Link to="/services">
-                <Button className="bg-brand-orange hover:bg-brand-dark-orange text-white px-8 py-4 text-lg rounded-full">
-                  Learn More About Our Services
-                </Button>
-              </Link>
+            <h3 className="text-2xl font-semibold mb-4">Phone</h3>
+            <p className="text-gray-600 text-lg">01-4974691</p>
+          </div>
+          
+          <div className="text-center p-8 bg-gray-50 rounded-2xl">
+            <div className="bg-brand-orange/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <Mail className="h-8 w-8 text-brand-orange" />
             </div>
+            <h3 className="text-2xl font-semibold mb-4">Email</h3>
+            <p className="text-gray-600 text-lg">orderinstant088@gmail.com</p>
           </div>
         </div>
       </Section>
