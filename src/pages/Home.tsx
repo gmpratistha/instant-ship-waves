@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Section, HeroSection } from "@/components/ui/containers";
@@ -33,15 +32,6 @@ const Home = () => {
               style={{ backgroundImage: `url(/lovable-uploads/ee2b4f6a-697c-44ad-9ba0-34fe553423ba.png)` }}
             />
             <div className="absolute inset-0 bg-black/30" />
-            <div className="relative h-full flex items-center justify-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-xl">
-                <div className="text-center">
-                  <Truck className="h-20 w-20 mx-auto mb-4 text-white" />
-                  <h3 className="text-2xl font-bold mb-4 text-white">Express Delivery</h3>
-                  <p className="text-white/90">Fast and reliable delivery service across Nepal</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </HeroSection>

@@ -366,33 +366,6 @@ const Services = () => {
         </div>
       </Section>
 
-      {/* Message from CEO */}
-      <Section className="bg-gray-50 py-16">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">Message <span className="text-brand-orange">From</span> Founder/CEO</h2>
-          <p className="text-xl mb-8 text-gray-600">Hear from Our CEO & Happy Customers</p>
-          
-          <Card className="max-w-2xl mx-auto overflow-hidden">
-            <CardContent className="p-8 text-center">
-              <div className="flex justify-center mb-6">
-                <div className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center">
-                  <svg viewBox="0 0 24 24" className="w-16 h-16" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Founder/CEO</h3>
-              <p className="text-gray-700 mb-6">
-                At OrderInstant, our mission is simple — to deliver with speed, care, and trust. Every package we handle represents someone's priority, and we treat it as our own. Thank you for choosing us as your logistics partner. We're committed to making delivery easier, faster, and more reliable every day.
-              </p>
-              <p className="text-black font-semibold text-lg">
-                Thank you for trusting us with your logistics needs. Together, we can achieve great things.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </Section>
-
       {/* CTA Section */}
       <section className="bg-brand-orange py-16 text-white">
         <div className="container-custom">
